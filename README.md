@@ -1,9 +1,9 @@
-# dat-serve-resolve-path
+# dweb-serve-resolve-path
 
-Beaker's method to find the file to serve in dat:// requests
+DBrowser's method to find the file to serve in dweb:// requests
 
 ```js
-const datServeResolvePath = require('@beaker/dat-serve-resolve-path')
+const datServeResolvePath = require('dweb-serve-resolve-path')
 
 var entry = await datServeResolvePath(archive, manifest, url, acceptHeader)
 console.log(entry) /* => {
@@ -17,8 +17,8 @@ console.log(entry) /* => {
 Pass in:
 
  - `archive` The DatArchive to read from.
- - `manifest` The dat archive's dat.json manifest (optional)
- - `url` The request URL (can be pre-parsed by `parse-dat-url`). If passing the URL, include the FULL url (hostname too).
+ - `manifest` The dweb archive's dweb.json manifest (optional)
+ - `url` The request URL (can be pre-parsed by `parse-dweb-url`). If passing the URL, include the FULL url (hostname too).
  - `acceptHeader` The request Accept header.
 
 Returns a `Stat` object with the `.path` string added. Will return `null` if no matching file is found.
